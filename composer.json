@@ -23,7 +23,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"XRuff\\Components\\": "src"
+			"XRuff\\Components\\SocialTags\\": "src"
 		}
 	},
 	"minimum-stability": "dev",

@@ -2,8 +2,15 @@
 	"name": "xruff/socialtags",
 	"type": "library",
 	"description": "Nette extension - Facebook and twitter meta tags",
-	"keywords": ["nette", "facebook", "twitter", "component"],
-	"license": ["MIT"],
+	"keywords": [
+		"nette",
+		"facebook",
+		"twitter",
+		"component"
+	],
+	"license": [
+		"MIT"
+	],
 	"authors": [
 		{
 			"name": "Pavel Lauko"
@@ -13,12 +20,11 @@
 		"issues": "https://github.com/XRuff/SocialTags/issues"
 	},
 	"require": {
-		"nette/application": "~2.3"
+		"nette/application": "^3.0"
 	},
 	"require-dev": {
-		"nette/application": "~2.3",
-		"nette/tester": "~1.1.0",
-		"tracy/tracy": "2.3.*",
+		"nette/application": "^3.0",
+		"tracy/tracy": "^2.7",
 		"vanio/coding-standards": "^0.1@dev"
 	},
 	"autoload": {

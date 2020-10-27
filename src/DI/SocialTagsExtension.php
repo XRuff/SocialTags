@@ -8,7 +8,7 @@ use XRuff\Components\SocialTags;
 class SocialTagsExtension extends Nette\DI\CompilerExtension
 {
 	/** @var array $DEFAULTS */
-	private static $DEFAULTS = [
+	private $defaults = [
 		'twitter' => [
 			'card' => 'summary_large_image',
 			'creator' => null,
@@ -32,9 +32,11 @@ class SocialTagsExtension extends Nette\DI\CompilerExtension
 	public function loadConfiguration()
 	{
 		$builder = $this->getContainerBuilder();
-		$config = $this->getConfig(self::$DEFAULTS);
+		$this->validateConfig($this->defaults);
 
-		$builder->addDefinition($this->prefix('socialTagsControlFactory'))
+		$config = $this->config;
+
+		$configuration = $builder->addDefinition($this->prefix('socialTagsControlFactory'))
 			->setClass(SocialTags\SocialTagsControl::class)
 			->setArguments([$config]);
 	}
